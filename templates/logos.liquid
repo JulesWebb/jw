@@ -1,0 +1,129 @@
+{% block content %}
+
+<!-- =============================================================== -->
+<!-- !   http://lisacatalano.github.io/brackets_course/pc.html       -->
+<!-- !   https://github.com/adobe/brackets/wiki/Brackets-Shortcuts   -->
+<!-- =============================================================== -->
+
+
+    <!-- HEADER -->
+    {% include "header" %}
+    <!-- End HEADER -->
+
+
+
+<!-- ========================================= -->
+<!-- !            SPLASH HEADER                -->
+<!-- ========================================= -->
+<section class="splash panel red logos">
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="row" data-equalizer data-equalizer-mq="large-up">
+				<div class="large-9 medium-7 columns" data-equalizer-watch>
+					<header class="table">
+						<div class="cell greeting">
+							<h2>
+								<span class="hi">Hi!</span>
+								<span>my name is Alvin</span>
+								<span>and i’m a Graphic Designer</span>
+								<span>also an eccentric person</span>
+								<span class="force"><span class="asterisk">*</span> strong with this one, the force is.</span>
+							</h2>
+
+							<h3>i do visual identity, branding, and illustration</h3>
+						</div>
+					</header>
+				</div>
+				<div class="large-3 columns medium-5" data-equalizer-watch>
+					<img src="assets/img/creativica_standing-avatar.svg" height="480" width="229" alt="Alvin Niwan Avatar" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !          TRANSITION/SEGUE 1             -->
+<!-- ========================================= -->
+<section class="segue custom-panel">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="text-center">I’ll Design an Adaptive and Coherent Brand Idenity for You</h2>
+		</div>
+	</div>
+</section><!-- segue -->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !          TRANSITION/SEGUE 1             -->
+<!-- ========================================= -->
+<section class="custom-panel white pb-0">
+	<div class="row">
+		<div class="large-12 columns red-link-text">
+			<p>Your logo is the graphic symbol that represents you or your business. It's the entry point and shortcut to your brand identity. Alvin will create a graphic for your brand that is not only strong, recognizable, and consistent, but is also creative and inventive. Below are samples of the work he's done. If you have any questions or would like to discuss your project please <a href="#" data-reveal-id="cta" class="drk">get in touch</a>.</p>
+		</div>
+	</div>
+</section><!-- segue -->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !                LOGOS                    -->
+<!-- ========================================= -->
+<section class="creativica custom-panel white pt-2">
+	<div class="row">
+		<div class="large-12 columns">
+
+			<div class="row panel portfolio gallery">
+				<div class="large-12 columns">
+					<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+						<!-- HEADER -->
+						{% include "portfolio-logos" %}
+						{% include "portfolio-logos" %}
+						{% include "portfolio-logos" %}
+						<!-- End HEADER -->
+					</ul>
+				</div>
+			</div><!-- ROW	-->
+
+		</div>
+	</div><!-- ROW	-->
+</section><!-- jules-->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !                 CTA                     -->
+<!-- ========================================= -->
+<section class="cta segue custom-panel red">
+	<div class="row">
+		<div class="large-9 columns">
+			<h2 class="text-center">Ready For A New Look?</h2>
+		</div>
+		<div class="large-3 columns">
+			<div class="text-center"><a href="#" data-reveal-id="cta" class="custom-button red drk">Get in Touch</a></div>
+		</div>
+	</div>
+	{% include "modal_cta" %}
+</section>
+
+
+
+    <!-- FOOTER -->
+    {% include "footer" %}
+    <!-- End FOOTER -->
+
+{% endblock %}

@@ -1,0 +1,133 @@
+//------------------------------------
+// PLAN CODE MANAGE || HM
+//------------------------------------
+.plan-code-manage {
+	.intro {
+		font-family: 'Roboto', sans-serif;
+		font-size: rem-calc(35);
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.25
+
+	}
+	h3 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		color: $charcoal;
+		margin-top: 1.5rem;
+	}
+	p {
+		text-align: left;
+	}
+	ul {
+		margin-top: rem-calc(40);
+	}
+}
+@media #{$small-only} {
+	.plan-code-manage {
+		.intro {
+			font-size: rem-calc(30);
+		}
+		.code h3, .manage h3 {
+			margin-top: -1.5rem;
+		}
+	}
+}
+@media #{$large-up} {
+	.plan-code-manage {
+		.wrap {
+			padding: 0 1rem;
+		}
+	}
+}
+
+
+//------------------------------------
+// SERVICES
+//------------------------------------
+.services {
+	h3 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		color: $charcoal;
+		margin-top: 1.5rem;
+	}
+	p {
+		text-align: left;
+		font-size: rem-calc(21);
+		line-height: 1.4;
+	}
+	@media #{$medium-up} {
+		.wrap {
+			padding: 0 1rem;
+		}
+	}
+}
+
+//------------------------------------
+// CONTACT
+//------------------------------------
+.contact {
+	h3 {
+		color:$charcoal;
+		margin-bottom: 1.5rem;
+	}
+	textarea {
+		margin-top:1rem;
+		margin-bottom: 1.5rem;
+		min-height: 200px;
+	}
+	.phone-wrap {
+		display: block;
+		margin-top: 2rem;
+		text-align: center;
+		.phone {
+			color: darken( $blue, 5% );
+			font-size: 2rem;
+			margin-left: .5rem;
+			font-weight: 900;
+			line-height: 1;
+		}
+	}
+	img {
+		margin-top: -2.5rem;
+	}
+	.button {
+		background: darken( $blue, 5% );
+		border-radius: $global-radius;
+		font-size: 1.5rem;
+	}
+	@media #{$medium-up} {
+		h2 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 2.5rem;
+			margin-bottom: 3rem;
+		}
+		.phone-wrap {
+			display: inline-block;
+			margin-top: .65rem;
+			float: right;
+			.phone {
+				font-size: 3rem;
+			}
+		}
+	}
+	@media #{$small-only} {
+		input {
+			width: 100%;
+		}
+		.phone-wrap {
+			padding-top: 2rem;
+			text-align: center;
+			img {
+				display: inline-block;
+			}
+			 a {
+				display: block;
+				margin-top:1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+
+//------------------------------------
+// NAVIGATION
+//------------------------------------
+.top-bar.expanded .title-area {
+	background: transparent;
+}
+.top-bar .name h1 a {
+	padding: 0 1rem;
+}
+.top-bar-section ul li {
+	background: transparent;
+}
+.top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar.expanded .title-area, .top-bar .top-bar-section li:not(.has-form) a:not(.button):hover {
+		background: $white;
+	}
+.top-bar {
+	background: transparent;
+}
+.top-bar .toggle-topbar.menu-icon a {
+	color: $charcoal;
+	font-size: 1.5rem;
+}
+.top-bar .toggle-topbar.menu-icon a span::after {
+	box-shadow: 0px 0px 0px 2px $charcoal, 0px 7px 0px 2px $charcoal, 0px 14px 0px 2px $charcoal;
+}
+.top-bar .name a {
+	width: 100%;
+	text-align: center;
+}
+.top-bar-section ul li>a {
+	color: $grey;
+	text-transform: uppercase;
+	letter-spacing: .03rem;
+	font-weight: 500;
+}
+.top-bar .name {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.top-bar .name h1 {
+	display: table-cell;
+	vertical-align: middle;
+	a {
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+@media #{$nav-medium-up} {
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		padding: 0 1rem;
+	}
+	.top-bar {
+		height: auto;
+		margin-bottom: 0;
+		 .title-area {
+				//max-height: 98px;
+			}
+		.top-bar-section {
+			ul li {
+				position: relative;
+			}
+			li.active:not(.has-form) a:not(.button) {
+				background: $white;
+				color: $grey;
+			}
+			ul:first-child > li.active > a:after, ul:first-child > li > a:hover:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: -28px;
+				top:initial;
+				margin-left: -28px;
+				border-left: 28px solid transparent;
+				border-right: 28px solid transparent;
+				border-top: 28px solid $white;
+			}
+			li:not(.has-form) a:not(.button):hover {
+				background: $white !important;
+				color: $grey;
+			}
+		}
+	}
+}
+@media #{$medium-only} {
+	.top-bar-section ul li.active > a, .top-bar-section li:not(.has-form) a:not(.button):hover, .top-bar-section ul li:hover:not(.has-form)>a {
+		background: $white-smoke;
+		color: $grey;
+	}
+	.top-bar {
+		.toggle-topbar {
+			right: 0;
+			margin-right: 0;
+		}
+		.name h1 a {
+		text-align:left;
+		}
+	}
+}
+@media #{$small-only} {
+	.top-bar-section ul li.active > a, .top-bar-section ul li:hover:not(.has-form)>a {
+		background: $white-smoke;
+		color: $grey;
+	}
+	.top-bar .top-bar-section li.active:not(.has-form) a:not(.button) {
+
+	}
+	.top-bar {
+		.toggle-topbar {
+			right: 50%;
+			margin-right: -85px;
+			&.menu-icon {
+				margin-top:0 !important;
+				top: 85% !important;
+			}
+		}
+		.name h1 a {
+		text-align:center;
+		}
+	}
+}
+@media only screen and (max-width: 800px) {
+	.top-bar{
+	 	height: 120px;
+	 	line-height: 120px;
+		.title-area {
+			margin-bottom:20px;
+		}
+	}
+}
+@media #{$nav-medium-down} {
+	.top-bar .top-bar-section li.active:not(.has-form) a:not(.button), .top-bar .top-bar-section li:not(.has-form) a:not(.button):hover {
+		background: $gainsboro !important;
+	}
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		padding-left: 2.08333rem;
+  		padding: 12px 0 12px 2.08333rem;
+		background: $white-smoke;
+		color: $grey;
+	}
+}

@@ -1,0 +1,40 @@
+//------------------------------------
+// FOOTER
+//------------------------------------
+#footer {
+	background: $charcoal;
+	padding: 1.25rem;
+	color: $iron;
+	color: $iron;
+	a {
+		color: $iron;
+		&:hover {
+			color: darken( $iron, 25% );
+		}
+	}
+	ul {
+		//width: 350px;
+		margin: 0 auto;
+		li:first-child {
+			margin-left: 0;
+		}
+	}
+	.copyright {
+		font-size: rem-calc(12);
+		line-height: 2;
+		text-align: center;
+	}
+	.socialmedia span {
+		font-size: 1.5rem;
+		margin-right: 5px;
+		display: inline-block
+	}
+	nav {
+		text-align: center;
+		span {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+}

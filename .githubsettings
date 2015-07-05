@@ -1,0 +1,11 @@
+{
+    "username": "JulesWebb",
+    "password": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6Ijc3ZjA5NTJkYWU1NjVjZTMyYTRmMDU5NjMyMTJkZDJiMzFjNGUzOTMiLCJlbWFpbCI6ImhlbGxvQGp1bGVzd2ViYi5jb20ifQ.Vok_OojD4L7YJmzLDB-xi2i9XJtpRYDYVX6f-_oyeJ4",
+    "name": "jules",
+    "email": "hello@juleswebb.com",
+    "gitHubPages": {
+        "repoUrl": "https://github.com/JulesWebb/jw.git",
+        "guid": "c29d3ad9-2ef1-49d6-ada8-46e175192813",
+        "branch": "gh-pages"
+    }
+}

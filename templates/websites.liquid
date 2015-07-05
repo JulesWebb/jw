@@ -1,0 +1,128 @@
+{% block content %}
+
+<!-- =============================================================== -->
+<!-- !   http://lisacatalano.github.io/brackets_course/pc.html       -->
+<!-- !   https://github.com/adobe/brackets/wiki/Brackets-Shortcuts   -->
+<!-- =============================================================== -->
+
+
+    <!-- HEADER -->
+    {% include "header" %}
+    <!-- End HEADER -->
+
+
+
+<!-- ========================================= -->
+<!-- !            SPLASH HEADER                -->
+<!-- ========================================= -->
+<section class="splash panel orange websites">
+	<div class="row">
+		<div class="large-12 columns">
+
+			<div class="row" data-equalizer data-equalizer-mq="large-up">
+
+				<div class="large-7 small-7 columns" data-equalizer-watch>
+					<div class="table station">
+						<div class="cell">
+							<img src="assets/img/juleswebb_station.svg" alt="computer station" width="620" height="311" />
+						</div>
+					</div><!--	table	-->
+				</div><!--	COL	-->
+
+				<div class="large-5 small-5 columns" data-equalizer-watch>
+					<div class="table avatar">
+						<div class="cell right">
+							<img src="assets/img/juleswebb_sitting-avatar.svg" alt="Jules Webb Avatar" width="372" height="410" />
+						</div>
+					</div><!--	table	-->
+				</div><!--	COL	-->
+
+			</div><!--	row	-->
+
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !          TRANSITION/SEGUE 1             -->
+<!-- ========================================= -->
+<section class="segue custom-panel">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="text-center">I can help you grow your business</h2>
+		</div>
+	</div>
+</section><!-- segue -->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !          TRANSITION/SEGUE 1             -->
+<!-- ========================================= -->
+<section class="custom-panel white pb-0">
+	<div class="row">
+		<div class="large-12 columns orange-link-text">
+			<p>Looking to have a website built, or an old site re-designed? I can guide you through the planning process and build a website that will not only make you look good and be effective, but also look good on both desktop and mobile devices. Below are samples of the websites I've built. If you have any questions or would like to discuss your project please <a href="#" data-reveal-id="cta" class="drk">get in touch</a>.</p>
+		</div>
+	</div>
+</section><!-- segue -->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !                LOGOS                    -->
+<!-- ========================================= -->
+<section class="creativica custom-panel white pt-2">
+	<div class="row">
+		<div class="large-12 columns">
+
+			<div class="row panel portfolio gallery">
+				<div class="large-12 columns">
+					<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+						<!-- HEADER -->
+						{% include "portfolio-web" %}
+						<!-- End HEADER -->
+					</ul>
+				</div>
+			</div><!-- ROW	-->
+
+		</div>
+	</div><!-- ROW	-->
+</section><!-- jules-->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !                 CTA                     -->
+<!-- ========================================= -->
+<section class="cta segue custom-panel orange">
+	<div class="row">
+		<div class="large-9 columns">
+			<h2 class="text-center">Want To Work With Me?</h2>
+		</div>
+		<div class="large-3 columns">
+			<div class="text-center"><a href="#" data-reveal-id="cta" class="custom-button orange drk">Get in Touch</a></div>
+		</div>
+	</div>
+	{% include "modal_cta" %}
+</section>
+
+
+
+    <!-- FOOTER -->
+    {% include "footer" %}
+    <!-- End FOOTER -->
+
+{% endblock %}

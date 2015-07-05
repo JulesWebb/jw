@@ -1,0 +1,8 @@
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: 'Sass Error: Undefined variable: "$charcoal". \A         on line 16 of C:\\WORK\\www\\2015_JulesWebb2\\scss\\components\\pages.scss \A   Use --trace for backtrace. \A '; }
+
+  body * {
+  	display: none;
+  }

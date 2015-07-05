@@ -1,0 +1,128 @@
+{% block content %}
+
+<!-- =============================================================== -->
+<!-- !   http://lisacatalano.github.io/brackets_course/pc.html       -->
+<!-- !   https://github.com/adobe/brackets/wiki/Brackets-Shortcuts   -->
+<!-- =============================================================== -->
+
+
+    <!-- HEADER -->
+    {% include "header" %}
+    <!-- End HEADER -->
+
+
+
+<!-- ========================================= -->
+<!-- !            SPLASH HEADER                -->
+<!-- ========================================= -->
+<section class="splash panel blue">
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="row" data-equalizer data-equalizer-mq="large-up">
+				<div class="large-7 columns" data-equalizer-watch style="min-height:400px;">
+					<header>
+<!--						<h2>We Plan<br>I Code<br>You Manage</h2>-->
+						<h3 style="margin-top:5rem;">Need help with content for this splash header</h3>
+					</header>
+
+				</div>
+				<div class="large-5 columns" data-equalizer-watch>
+<!--					<img src="assets/img/juleswebb_avatar.svg" width="400" height="516" alt="Jules Webb Avatar" />-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !          TRANSITION/SEGUE 1             -->
+<!-- ========================================= -->
+<section class="contact segue custom-panel">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="text-center">I'd love to learn about your project</h2>
+		</div>
+	</div>
+</section><!-- segue -->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !             CONTACT FORM                -->
+<!-- ========================================= -->
+<section class="contact custom-panel white">
+	<div class="row">
+		<div class="large-12 columns">
+
+
+
+
+
+				<h3>Get In Touch</h3>
+
+				<form id="myForm" method="post" data-abide>
+
+					<div class="row">
+						<div class="large-6 columns">
+							<small class="error">Your full name is required.</small>
+							<input type="text" placeholder="Full Name" required>
+						</div>
+						<div class="large-6 columns">
+							<small class="error">An email address is required.</small>
+							<input type="email" placeholder="username@address.com" required>
+						</div>
+					</div>
+
+					<small class="error">Your message is required.</small>
+					<textarea placeholder="Enter your message here" required></textarea>
+
+					<input type="submit" class="custom-button blue" value="Send Message">
+					<span class="phone-wrap">
+						<img src="assets/img/icon_phone.svg" width="50" height="70" alt="phone" />
+						<a href="tel:425-505-3075" class="phone">425-505-3075</a>
+					</span>
+				</form>
+
+
+
+
+
+
+
+
+
+		</div>
+	</div><!-- ROW	-->
+</section><!-- jules-->
+
+
+
+
+
+<!-- ========================================= -->
+<!-- !                 CTA                     -->
+<!-- ========================================= -->
+<section class="cta segue custom-panel blue">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="text-center">Looking Forward to Talking With You!</h2>
+		</div>
+	</div>
+</section>
+
+
+
+    <!-- FOOTER -->
+    {% include "footer" %}
+    <!-- End FOOTER -->
+
+{% endblock %}
+

@@ -1,0 +1,464 @@
+
+@charset "UTF-8";
+// CUSTOM MODULAR STYLES
+// juleswebb.com
+
+
+//------------------------------------
+// Mixins
+//------------------------------------
+// http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+
+//------------------------------------
+// COLORED PANELS
+//------------------------------------
+.splash {
+	border: none;
+	margin-bottom:inherit;
+	&.green {
+		background: $green;
+	}&.green2 {
+		background: $green2;
+	}
+	&.yellow {
+		background: $yellow;
+	}
+	&.blue {
+		background: $blue;
+	}
+	&.red {
+		background: $red;
+	}
+	&.orange {
+		background: $orange;
+	}
+}
+.custom-panel {
+  @include panel();
+	padding-bottom: rem-calc(80);
+	padding-top: rem-calc(80);
+	border-style: none;
+	&.charcoal {
+		background: $charcoal;
+		h2 {
+			font-size: rem-calc(50);
+			color: $white;
+			line-height: 1.2;
+		}
+	}
+	&.white {
+		background: $white;
+	}
+	&.green {
+		background: $green;
+	}
+	&.green2 {
+		background: $green2;
+	}
+	&.green.drk {
+		background: darken( $green, 3% );
+	}
+	&.yellow {
+		background: $yellow;
+	}
+	&.yellow.drk {
+		background: darken( $yellow, 3% );
+	}
+	&.blue {
+		background: $blue;
+	}
+	&.blue.drk {
+		background: darken( $blue, 3% );
+	}
+	&.red {
+		background: $red;
+	}
+	&.red.drk {
+		background: darken( $red, 3% );
+	}
+	&.orange {
+		background: $orange;
+	}
+	&.orange.drk {
+		background: darken( $orange, 3% );
+	}
+	&.segue {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	@media #{$small-only} {
+		h2 {
+			line-height: 1.25;
+		}
+	}
+}
+
+//------------------------------------
+// COLORED BUTTONS
+//------------------------------------
+.custom-button {
+	@include button();
+	border-radius: $global-radius !important;
+	font-family: 'Roboto', sans-serif;
+	font-size: rem-calc(20);
+	&.red {
+		background: $red;
+		&:hover {
+			background: darken( $red, 10% );
+		}
+	}
+	&.red.drk {
+		background: darken( $red, 10% );
+		&:hover {
+			background: darken( $red, 18% );
+		}
+	}
+	&.green.drk {
+		background: darken( $green, 10% );
+		&:hover {
+			background: darken( $green, 15% );
+		}
+	}
+	&.blue {
+		background: darken( $blue, 5% );
+		&:hover {
+			background: darken( $blue, 10% );
+		}
+	}
+	&.blue.drk {
+		background: darken( $blue, 10% );
+		&:hover {
+			background: darken( $blue, 15% );
+		}
+	}
+	&.yellow.drk {
+		background: darken( $yellow, 7% );
+		&:hover {
+			background: darken( $yellow, 11% );
+		}
+	}
+	&.orange {
+		background: $orange;
+		&:hover {
+			background: darken( $orange, 10% );
+		}
+	}
+	&.orange.drk {
+		background: darken( $orange, 7% );
+		&:hover {
+			background: darken( $orange, 11% );
+		}
+	}
+	&.orange.ghost {
+		background: transparent;
+		border: 2px solid $orange;
+		color: darken( $orange, 5% );
+		&:hover {
+			color:$white;
+			background: $orange;
+		}
+	}
+//	&.yellow.drker {
+//		background: darken( $yellow, 10% );
+//		&:hover {
+//			background: darken( $yellow, 15% );
+//		}
+//	}
+}
+
+@media #{$xsmall-only} {
+	.custom-button.mr-2 {
+		margin-right: 0;
+	}
+}
+
+
+//------------------------------------
+// TESTIMONIAL
+//------------------------------------
+.testimonial {
+	&.custom-panel {
+		padding-top: 3.25rem;
+	}
+	blockquote {
+		border: none;
+		margin-bottom: 0;
+		padding-top: 0;
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-style: italic;
+			font-weight: 300;
+			//font-size: rem-calc(25);
+		}
+		cite, cite a {
+			font-family: 'Roboto', sans-serif;
+			color: $grey;
+			//font-size: rem-calc(19);
+			font-weight: 300;
+			font-style: normal;
+		}
+		&:before {			
+			content:url('../img/icon_quote.svg');
+			display: block;
+		}
+	}
+	@media #{$medium-up} {
+		blockquote {
+			p {
+				font-size: rem-calc(25);
+			}
+			cite, cite a {
+				font-size: rem-calc(19);
+			}
+		}
+	}
+}
+
+//------------------------------------
+// CTA
+//------------------------------------
+.cta {
+	h2 {
+		font-size: rem-calc(50);
+		color: $white;
+		line-height: 1;
+		margin-bottom: 2rem;
+		margin-top: 0;
+	}
+	.custom-button {
+		display: inline-block;
+		margin: 0;
+		width:100%;
+		max-width: 250px;
+	}
+}
+@media #{$large-up} {
+	.cta {
+		h2 {
+			margin: 0;
+		}
+	}
+}
+
+
+
+//------------------------------------
+// GLOBAL MODAL STYLES
+//------------------------------------
+.reveal-modal {
+	img {
+		padding:1rem;
+	}
+}
+
+
+
+//------------------------------------
+// CREATIVICA and JULES
+//------------------------------------
+.creativica {
+	&.hm {
+		padding-top: 9rem;
+		.skills {
+			margin-top: 0;
+		}
+		img.avatar {
+			margin-top: -80px;
+		}
+	}
+	img.avatar {
+		margin-top: -135px;
+	}
+	h3 {
+		margin-top: 3rem;
+	}
+	.skills {
+		margin-top: 9rem;
+		h3 {
+			margin-top: 3rem;
+		}
+	}
+	.sm {
+		margin-top: 3rem;
+	}
+	.rmore {
+		color: $white;
+		background: $charcoal;
+		display: block;
+		padding: 1.5rem;
+		&:hover {
+			background: darken( $charcoal, 20% );
+		}
+	}
+	@media #{$large-up} {
+		.rmore {
+			padding: .25rem;
+		}
+	}
+}
+.jules {
+	.skills {
+		margin-top: 3rem;
+		p {
+			color: darken( $green2, 30% );
+		}
+		h3 {
+			color:$white;
+			margin-top: 0;
+		}
+	}
+	.custom-panel{
+		padding-top:2rem;
+		padding-bottom: 2rem;
+	}
+	.sm {
+		margin-top: 5rem;
+	}
+	@media #{$large-up} {
+		.imgwrap {
+			position: relative;
+		}
+		img.avatar {
+			position: absolute;
+			top: -45px;
+			left: -60px;
+		}
+		.custom-panel{
+			padding-top: 4rem;
+		}
+	}
+	.rmore {
+		a {
+			color: $green;
+		}
+	}
+}
+
+
+.creativica, .jules  {
+	.panel {
+		margin-bottom: 2rem;
+		ul {
+			font-size: 1rem;
+		}
+	}
+	.row.portfolio {
+		margin-top: 1rem;
+		text-align: center;
+		h3 {
+			margin-top: .5rem;
+			margin-bottom: 0;
+		}
+	}
+	.row.gallery {
+		h3 {
+			font-size: 1.25rem;
+		}
+	}
+	h3 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		color: $charcoal;
+	}
+	.skills {
+		h3 {
+			text-align: center;
+		}
+	}
+	.desc {
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.sm {
+		font-size: rem-calc(30);
+		color: $charcoal;
+		font-weight: 500;
+		a {
+			color: $charcoal;
+			&:hover {
+				color: darken( $green, 50% );
+			}
+			span {
+				margin-left: 1rem;
+				font-size: rem-calc(50);
+			}
+		}
+		.text {
+			display:block;
+		}
+		@media #{$large-up} {
+			.text {
+				display: inline-block;
+			}
+		}
+	}
+	li {
+		margin: 1.5rem 0;
+		.logowrap {
+			position: relative;
+			 a {
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height: 100%;
+				text-align: center;
+				font-size: 0;
+				color: $white;
+				&:hover {
+					//display: block;
+					//@include single-transition($property:background, $speed:300ms, $ease:ease 0ms);
+					background: $red url("../img/eye.svg") no-repeat center center;
+					//display: table-cell;
+					//vertical-align: middle;
+					border-top-left-radius: $global-radius;
+					border-top-right-radius: $global-radius;;
+					@include alpha-attribute('background-color', rgba($red, 0.9), white);
+					font-size: 8rem;
+				}
+				span {
+					font-size:0;
+					display: table;
+					height: 100%;
+					width: 100%;
+					&:hover {
+						@include single-transition();
+					}
+					span {
+						display: table-cell;
+						vertical-align: bottom;
+						text-align: center;
+						padding-bottom: 1rem;
+						&:hover {
+							font-size: rem-calc(16);
+							//background-image: url("../img/eye.svg") no-repeat;
+							background-position: center;
+						}
+					}
+				}
+			}
+		}
+		img {
+			border-top-left-radius: $global-radius;
+			border-top-right-radius: $global-radius;
+		}
+	}
+	@media #{$large-up} {
+		.skills {
+			h3 {
+				text-align: left;
+			}
+		}
+	}
+}
+
+//.reveal-link {
+//	@include single-transition($property:background, $speed:300ms, $ease:linear);
+//}

@@ -1,5 +1,5 @@
 @import "settings";
-@import "foundation";
+@import "../bower_components/foundation/scss/foundation";
 
 // Or selectively include components
 // @import
@@ -38,3 +38,12 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+@import
+	"components/fonts",	
+	"components/nav-main",
+	"components/footer",
+	"components/modules",
+	"components/pages",
+	"components/splash",
+	"components/global";

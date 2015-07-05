@@ -1,0 +1,56 @@
+//------------------------------------
+// GLOBAL
+//------------------------------------
+h1, h2, h3, h4, h5, h6, body, p {
+	font-family: 'Roboto', sans-serif;
+}
+p {
+	font-size: rem-calc(19);
+}
+.pb-0 {
+	padding-bottom: 0;
+}
+.pt-0 {
+	padding-top: 0;
+}
+.pt-2 {
+	padding-top: 2rem;
+}
+.pb-2 {
+	padding-bottom: 2rem;
+}
+.mr-2 {
+	margin-right: 2rem;
+}
+.red-link-text a {
+	color: $red;
+	border-bottom: 1px solid $red;
+	&:hover {
+		color: darken( $red, 10% );
+		border-bottom-color: darken( $red, 10% );
+	}
+}
+.orange-link-text a {
+	color: $orange;
+	border-bottom: 1px solid $orange;
+	&:hover {
+		color: darken( $orange, 10% );
+		border-bottom-color: darken( $orange, 10% );
+	}
+}
+.table {
+	display: table;
+	height: 100%;
+	.cell {
+		display: table-cell;
+		height: 100%;
+	}
+}
+
+@media #{$small-only} {
+	.btn-wrap {
+		.custom-button {
+			display: inline-block;
+		}
+	}
+}
