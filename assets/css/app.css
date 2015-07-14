@@ -7568,7 +7568,7 @@ th.hide-for-touch {
       top: 85% !important; }
   .top-bar .name h1 a {
     text-align: center; } }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 799px) {
   .top-bar {
     height: 120px;
     line-height: 120px; }
@@ -7650,10 +7650,6 @@ th.hide-for-touch {
       line-height: 1.4; }
   .custom-panel.charcoal {
     background: #56575b; }
-    .custom-panel.charcoal h2 {
-      font-size: 3.125rem;
-      color: #FFFFFF;
-      line-height: 1.2; }
   .custom-panel.white {
     background: #FFFFFF; }
   .custom-panel.green {
@@ -7684,6 +7680,24 @@ th.hide-for-touch {
   @media only screen and (max-width: 40em) {
     .custom-panel h2 {
       line-height: 1.25; } }
+
+.segue.one h2 {
+  font-size: 2.25rem;
+  line-height: 1.15; }
+@media only screen and (max-width: 40em) {
+  .segue.one h2 {
+    font-size: 2rem; } }
+
+.custom-panel.charcoal h2 {
+  font-size: 3rem;
+  color: #FFFFFF;
+  line-height: 1.15; }
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+    .custom-panel.charcoal h2 {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 40em) {
+    .custom-panel.charcoal h2 {
+      font-size: 2.25rem; } }
 
 .custom-button {
   -webkit-appearance: none;
@@ -7791,10 +7805,13 @@ th.hide-for-touch {
   margin: 0;
   width: 100%;
   max-width: 250px; }
-
 @media only screen and (min-width: 64.0625em) {
   .cta h2 {
     margin: 0; } }
+@media only screen and (max-width: 40em) {
+  .cta h2 {
+    font-size: 2.5rem; } }
+
 .reveal-modal img {
   padding: 1rem; }
 
@@ -7806,8 +7823,6 @@ th.hide-for-touch {
     margin-top: -80px; }
 .creativica img.avatar {
   margin-top: -135px; }
-.creativica h3 {
-  margin-top: 3rem; }
 .creativica .skills {
   margin-top: 9rem; }
   .creativica .skills h3 {
@@ -7824,6 +7839,11 @@ th.hide-for-touch {
 @media only screen and (min-width: 64.0625em) {
   .creativica .rmore {
     padding: .25rem; } }
+@media only screen and (max-width: 40em) {
+  .creativica img.avatar {
+    margin-top: -100px; }
+  .creativica .skills {
+    margin-top: 6rem; } }
 
 .jules .skills {
   margin-top: 3rem; }
@@ -7872,19 +7892,30 @@ th.hide-for-touch {
 .creativica .sm, .jules .sm {
   font-size: 1.875rem;
   color: #56575b;
-  font-weight: 500; }
+  font-weight: 500;
+  line-height: 1.15; }
   .creativica .sm a, .jules .sm a {
-    color: #56575b; }
+    color: #56575b;
+    margin-left: 1rem; }
     .creativica .sm a:hover, .jules .sm a:hover {
       color: black; }
     .creativica .sm a span, .jules .sm a span {
-      margin-left: 1rem;
       font-size: 3.125rem; }
   .creativica .sm .text, .jules .sm .text {
-    display: block; }
+    display: block;
+    margin-bottom: .5rem; }
   @media only screen and (min-width: 64.0625em) {
     .creativica .sm .text, .jules .sm .text {
-      display: inline-block; } }
+      display: inline-block;
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+    .creativica .sm:first-child a, .jules .sm:first-child a {
+      margin-left: 0; } }
+  @media only screen and (max-width: 40em) {
+    .creativica .sm .text, .jules .sm .text {
+      font-size: 1.5rem; }
+    .creativica .sm:first-child a, .jules .sm:first-child a {
+      margin-left: 0; } }
 .creativica li, .jules li {
   margin: 1.5rem 0; }
   .creativica li .logowrap, .jules li .logowrap {
@@ -7972,9 +8003,7 @@ th.hide-for-touch {
   margin-bottom: 1.5rem;
   min-height: 200px; }
 .contact .phone-wrap {
-  display: block;
-  margin-top: 2rem;
-  text-align: center; }
+  display: block; }
   .contact .phone-wrap .phone {
     color: #009ce6;
     font-size: 2rem;
@@ -7988,28 +8017,30 @@ th.hide-for-touch {
   border-radius: 5px;
   font-size: 1.5rem; }
 @media only screen and (min-width: 40.0625em) {
-  .contact h2 {
-    font-size: 3rem; }
   .contact h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 3rem; }
   .contact .phone-wrap {
     display: inline-block;
-    margin-top: .65rem;
-    float: right; }
+    margin-top: 0;
+    position: absolute;
+    bottom: 25px;
+    right: 15px; }
     .contact .phone-wrap .phone {
       font-size: 3rem; } }
 @media only screen and (max-width: 40em) {
   .contact input {
     width: 100%; }
   .contact .phone-wrap {
-    padding-top: 2rem;
+    position: static;
+    margin-top: 5rem;
     text-align: center; }
     .contact .phone-wrap img {
       display: inline-block; }
-    .contact .phone-wrap a {
+    .contact .phone-wrap .phone {
       display: block;
-      margin-top: 1rem; } }
+      margin-top: 1rem;
+      margin-left: 0; } }
 
 .splash.green h2 {
   font-size: 3rem;
@@ -8092,16 +8123,25 @@ th.hide-for-touch {
   .splash.logos img {
     margin-top: -24px; } }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  .splash.logos header {
+    padding-left: 2rem; }
   .splash.logos h2, .splash.logos h3 {
     font-size: 1.65rem; }
   .splash.logos img {
     margin-top: -24px; } }
 @media only screen and (max-width: 40em) {
+  .splash.logos header {
+    margin-bottom: 1.5rem; }
   .splash.logos h2, .splash.logos h3 {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.65rem; }
   .splash.logos h2 {
     line-height: 1;
-    margin-top: 1.5rem; } }
+    margin-top: 1.5rem; }
+    .splash.logos h2 .hi {
+      font-size: 6rem; }
+    .splash.logos h2 .force {
+      font-size: 1.15rem; } }
 .splash.logo.panel {
   padding: 0;
   height: 450px; }
@@ -8145,6 +8185,8 @@ th.hide-for-touch {
   margin-top: 4.5rem; }
 .splash.websites .table {
   clip: initial; }
+.splash.websites img {
+  vertical-align: bottom; }
 
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
   .splash.websites .table.avatar, .splash.websites .cell.avatar {
@@ -8162,7 +8204,11 @@ th.hide-for-touch {
   .splash.websites .station img {
     max-width: 250px; }
   .splash.websites .avatar img {
-    max-width: 200px; } }
+    max-width: 200px; }
+  .splash.websites .large-7 {
+    display: none; }
+  .splash.websites .avatar {
+    margin-top: 2.5rem; } }
 .plan-code-manage .intro {
   font-family: 'Roboto', sans-serif;
   font-size: 2.1875rem;
@@ -8192,6 +8238,9 @@ h1, h2, h3, h4, h5, h6, body, p {
 
 p {
   font-size: 1.1875rem; }
+
+a.phone:hover, .phone ahover {
+  cursor: default; }
 
 .pb-0 {
   padding-bottom: 0; }
